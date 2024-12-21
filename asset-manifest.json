@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Gwchicango/client.git/static/css/main.1ffc4f31.css",
-    "main.js": "/Gwchicango/client.git/static/js/main.934d0493.js",
-    "static/media/background.jpg": "/Gwchicango/client.git/static/media/background.98370343bdcb3a2bfa85.jpg",
-    "index.html": "/Gwchicango/client.git/index.html",
-    "main.1ffc4f31.css.map": "/Gwchicango/client.git/static/css/main.1ffc4f31.css.map",
-    "main.934d0493.js.map": "/Gwchicango/client.git/static/js/main.934d0493.js.map"
+    "main.css": "/Gwchicango/client/static/css/main.1ffc4f31.css",
+    "main.js": "/Gwchicango/client/static/js/main.9f0d1b45.js",
+    "static/media/background.jpg": "/Gwchicango/client/static/media/background.98370343bdcb3a2bfa85.jpg",
+    "index.html": "/Gwchicango/client/index.html",
+    "main.1ffc4f31.css.map": "/Gwchicango/client/static/css/main.1ffc4f31.css.map",
+    "main.9f0d1b45.js.map": "/Gwchicango/client/static/js/main.9f0d1b45.js.map"
   },
   "entrypoints": [
     "static/css/main.1ffc4f31.css",
-    "static/js/main.934d0493.js"
+    "static/js/main.9f0d1b45.js"
   ]
 }
