@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Gwchicango.github.io/client",
+  "homepage": "https://Gwchicango.github.io/client/build",
     "dependencies": {
     "@heroicons/react": "^1.0.6",
     "axios": "^1.7.9",
