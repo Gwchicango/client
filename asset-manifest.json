@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Gwchicango/client.git/static/css/main.1ffc4f31.css",
+    "main.js": "/Gwchicango/client.git/static/js/main.934d0493.js",
+    "static/media/background.jpg": "/Gwchicango/client.git/static/media/background.98370343bdcb3a2bfa85.jpg",
+    "index.html": "/Gwchicango/client.git/index.html",
+    "main.1ffc4f31.css.map": "/Gwchicango/client.git/static/css/main.1ffc4f31.css.map",
+    "main.934d0493.js.map": "/Gwchicango/client.git/static/js/main.934d0493.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ffc4f31.css",
+    "static/js/main.934d0493.js"
+  ]
+}
