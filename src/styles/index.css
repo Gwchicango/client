@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos adicionales para el Navbar */
+.navbar {
+  background-color: #1f2937; /* bg-gray-800 */
+  padding: 1rem; /* p-4 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px; /* container mx-auto */
+  margin: 0 auto;
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+}
+
+.navbar-brand {
+  color: #ffffff; /* text-white */
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold; /* font-bold */
+}
+
+.navbar-links {
+  display: flex; /* flex */
+  gap: 1rem; /* space-x-4 */
+}
+
+.navbar-link {
+  color: #d1d5db; /* text-gray-300 */
+  transition: color 0.3s; /* transition duration-300 */
+}
+
+.navbar-link:hover {
+  color: #ffffff; /* hover:text-white */
+}
+
 /* Animaciones personalizadas */
 @keyframes fade-in {
   from {
@@ -27,4 +67,158 @@
 
 .animate-bounce {
   animation: bounce 3s infinite;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2980b9;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.episode-card-container {
+  width: 100%;
+  height: auto; /* Ensure the container height adjusts to content */
+  margin-bottom: 1rem; /* Add margin to prevent overlap */
+}
+
+.episode-card {
+  position: relative;
+  width: 100%;
+  height: auto; /* Ensure the card height adjusts to content */
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.episode-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.episode-card.flipped .episode-card-inner {
+  transform: rotateY(180deg);
+}
+
+.episode-card-front,
+.episode-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+}
+
+.episode-card-front {
+  background: white;
+}
+
+.episode-card-back {
+  transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.3s;
+}
+
+.modal-header button:hover {
+  color: #111827;
+}
+
+.modal-body {
+  padding: 1rem 0;
+}
+
+.character-card {
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.character-card img {
+  width: 4rem;
+  height: 4rem;
+  object-cover: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.character-card div {
+  flex: 1;
+}
+
+.character-card p {
+  margin: 0.25rem 0;
 }

@@ -13,4 +13,14 @@ const fetchData = async () => {
   }
 };
 
-module.exports = { fetchData };
+const fetchCharacterDetails = async (characterUrls) => {
+  try {
+    const characterPromises = characterUrls.map(url => fetch(url).then(res => res.json()));
+    const characters = await Promise.all(characterPromises);
+    return characters;
+  } catch (error) {
+    console.error('Error al obtener los detalles de los personajes', error);
+  }
+};
+
+module.exports = { fetchData, fetchCharacterDetails };
