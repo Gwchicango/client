@@ -8,7 +8,9 @@ const EpisodesPage = () => {
   useEffect(() => {
     const getEpisodes = async () => {
       const data = await fetchData();
-      setEpisodes(data.results); // Asegúrate de que esta línea coincida con la estructura de la respuesta de tu API
+      if (data && data.results) {
+        setEpisodes(data.results);
+      }
     };
     getEpisodes();
   }, []);

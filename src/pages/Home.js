@@ -13,7 +13,7 @@ const Home = () => {
         <h1 className="text-4xl font-bold mb-8 text-white">
           Bienvenido al Mundo de Rick and Morty
         </h1>
-        <Link to="/episodes">
+        <Link to="/client/episodes">
           <button className="animate-bounce bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-800 transition duration-300 transform hover:scale-105 flex items-center justify-center mx-auto">
             Ver Episodios
             <ArrowRightIcon className="w-5 h-5 ml-2" />
