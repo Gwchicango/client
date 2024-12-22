@@ -9,7 +9,7 @@ Este proyecto es una aplicación web que muestra información sobre los personaj
    https://github.com/Gwchicango/client.git
 
 2. Navega al directorio del proyecto:
-    cd rick-and-morty-app/client
+    cd client
 
 3. Instala las dependencias:
     npm install
