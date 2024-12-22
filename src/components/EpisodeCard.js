@@ -46,7 +46,7 @@ const EpisodeCard = ({ episode }) => {
         <p className="text-gray-300">Episode: {episode.episode}</p>
         <button
           onClick={toggleShowMore}
-          className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 transition duration-300"
+          className="mt-4 bg-slate-700 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
         >
           {showMore ? 'Show less' : 'Show more'} 
         </button>

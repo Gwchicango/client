@@ -114,12 +114,12 @@ const CharactersPage = () => {
       </div>
       <Footer />
       <div
-        className="z-40 fixed bottom-4 right-1 flex border-cyan-50 border-2 items-center text-white bg-slate-800 p-2 rounded-full cursor-pointer shadow-lg hover:bg-blue-900 transition duration-300 ease-in-out"
+        className="z-40 fixed bottom-4 right-1 border-2 flex items-center text-white bg-slate-800 p-2 sm:p-3 md:p-4 rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out"
         onClick={scrollTop}
         style={{ display: showScroll ? 'flex' : 'none' }}
       >
-        <FaChevronUp style={{ fontSize: '1rem' }} />
-        <span className="ml-1 text-sm">Back to top</span>
+        <FaChevronUp className="text-xs sm:text-sm md:text-base" />
+        <span className="ml-1 text-xs sm:text-sm md:text-base">Back to top</span>
       </div>
     </div>
   );

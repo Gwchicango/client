@@ -79,11 +79,12 @@ const SearchBar = ({ searchTerm, setSearchTerm, setFilteredData, filter, setFilt
           className="text-white ml-2 cursor-pointer"
           onClick={() => setShowFilter(!showFilter)}
           title="Filter"
-        />      </div>
+        />
+      </div>
       {showFilter && (
-        <div className="absolute top-0 -right-32 mt-2 bg-gray-800 border border-gray-600 rounded shadow-lg z-10">
+        <div className="absolute top-0 right-0 mt-2 bg-gray-800 border border-gray-600 rounded shadow-lg z-10 w-full sm:w-auto">
           <select
-            className="p-2 rounded bg-gray-700 text-white"
+            className="p-2 rounded bg-gray-700 text-white w-full sm:w-auto"
             value={filter}
             onChange={e => setFilter(e.target.value)}
           >
@@ -108,7 +109,7 @@ const SearchBar = ({ searchTerm, setSearchTerm, setFilteredData, filter, setFilt
       )}
       {noResults && (
         <div className="absolute bg-gray-800 border border-gray-600 rounded w-full mt-1 p-2 text-center text-white z-10 shadow-lg">
-          No se encontraron resultados
+          No results found
         </div>
       )}
     </div>
