@@ -1,5 +1,10 @@
 const API_BASE_URL = 'https://rickandmortyapi.com/api';
 
+/**
+ * Función para obtener todos los personajes desde la API.
+ * La función maneja la paginación para obtener todos los personajes.
+ * @returns {Array|null} - Un array con todos los personajes o null en caso de error.
+ */
 const fetchAllCharacters = async () => {
   let allCharacters = [];
   let nextPageUrl = `${API_BASE_URL}/character`;

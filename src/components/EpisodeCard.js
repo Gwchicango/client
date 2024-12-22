@@ -2,10 +2,22 @@ import React, { useState } from 'react';
 import { fetchCharacterDetails } from '../services/ApiService';
 import Characters from './Characters';
 
+/**
+ * Componente para mostrar la tarjeta de un episodio.
+ * @param {Object} props - Las propiedades del componente.
+ * @param {Object} props.episode - Los datos del episodio.
+ * @returns {JSX.Element} - El componente de la tarjeta del episodio.
+ */
 const EpisodeCard = ({ episode }) => {
+  // Estado para controlar si se muestra más información
   const [showMore, setShowMore] = useState(false);
+  // Estado para almacenar los detalles de los personajes
   const [characters, setCharacters] = useState([]);
 
+  /**
+   * Función para alternar la visualización de más información.
+   * Si se muestra más información, se obtienen los detalles de los personajes.
+   */
   const toggleShowMore = async () => {
     if (!showMore) {
       const characterDetails = await fetchCharacterDetails(episode.characters);
@@ -14,13 +26,16 @@ const EpisodeCard = ({ episode }) => {
     setShowMore(!showMore);
   };
 
+  /**
+   * Función para cerrar el modal.
+   */
   const closeModal = () => {
     setShowMore(false);
   };
 
   return (
     <>
-      <div className="episode-card bg-slate-900 bg-opacity-90 border border-gray-300 rounded-lg shadow-lg p-4 transform transition duration-500 hover:scale-105 hover:shadow-2xl mt-16 relative z-10">
+      <div className="episode-card bg-slate-900 bg-opacity-90 border border-gray-300 rounded-lg shadow-lg p-4 transform transition duration-500 hover:scale-105 hover:shadow-2xl mt-6 relative z-10">
         <img
           src={`https://rickandmortyapi.com/api/character/avatar/${episode.id}.jpeg`}
           alt={episode.name}

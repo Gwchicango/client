@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Rick and Morty App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web que muestra información sobre los personajes y episodios de la serie Rick and Morty. La aplicación permite buscar y filtrar personajes y episodios utilizando una barra de búsqueda y opciones de filtro.
 
-## Available Scripts
+## Pasos para instalar y ejecutar el proyecto localmente
 
-In the project directory, you can run:
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/tu-usuario/rick-and-morty-app.git
 
-### `npm start`
+2. Navega al directorio del proyecto:
+    cd rick-and-morty-app/client
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Instala las dependencias:
+    npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Ejecuta la aplicación en modo de desarrollo:
+    npm start
+    Abre http://localhost:3000 para ver la aplicación en tu navegador.
 
-### `npm test`
+## Tecnologías utilizadas
+* React
+* React Router DOM
+* Heroicons
+* React Icons
+* Babel
+* Tailwind
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Enlace al proyecto publicado en GitHub Pages
+https://gwchicango.github.io/client/
 
-### `npm run build`
+## Desafíos enfrentados y cómo los solucionaste
+### Desafío 1: Manejo de la paginación en la API
+Para obtener todos los personajes de la API, fue necesario manejar la paginación. Implementé una función que realiza múltiples solicitudes a la API hasta obtener todos los personajes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Desafío 2: Mostrar correctamente el pie de página
+El pie de página no se mostraba correctamente en algunas páginas. Para solucionarlo, ajusté el diseño del contenedor principal para que ocupe toda la altura de la pantalla y aseguré que el pie de página se posicione al final.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Desafío 3: Filtrado y búsqueda de personajes y episodios
+Implementé una barra de búsqueda con opciones de filtro que permite a los usuarios buscar y filtrar personajes y episodios de manera eficiente. Utilicé useState y useEffect para manejar el estado y los efectos secundarios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts disponibles
+En el directorio del proyecto, puedes ejecutar:
+1. npm start
+    Ejecuta la aplicación en modo de desarrollo.
+    Abre http://localhost:3000 para verla en tu navegador.
 
-### `npm run eject`
+2. npm run build
+    Construye la aplicación para producción en la carpeta build.
+    Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. npm run deploy
+Despliega la aplicación en GitHub Pages.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Librerías instaladas
+npx create-react-app client
+npm install web-vitals
+npm install react-router-dom
+npm install @heroicons/react@v1
+npm install react-icons
+npm install --save-dev @babel/plugin-proposal-private-property-in-object
+npm install gh-pages --save-dev
+npm install --save-dev jsdoc
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

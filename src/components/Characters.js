@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * Componente para mostrar una lista de personajes.
+ * @param {Object} props - Las propiedades del componente.
+ * @param {Array} props.characters - La lista de personajes a mostrar.
+ * @returns {JSX.Element} - El componente de la lista de personajes.
+ */
 const Characters = ({ characters }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

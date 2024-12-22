@@ -1,5 +1,9 @@
 const API_URL = 'https://rickandmortyapi.com/api/episode';
 
+/**
+ * Función para obtener los datos de los episodios desde la API.
+ * @returns {Object} - Los datos de los episodios.
+ */
 const fetchData = async () => {
   try {
     const response = await fetch(API_URL);
@@ -13,6 +17,11 @@ const fetchData = async () => {
   }
 };
 
+/**
+ * Función para obtener los detalles de los personajes desde la API.
+ * @param {Array} characterUrls - Las URLs de los personajes.
+ * @returns {Array} - Los detalles de los personajes.
+ */
 const fetchCharacterDetails = async (characterUrls) => {
   try {
     const characterPromises = characterUrls.map(url => fetch(url).then(res => res.json()));
