@@ -6,7 +6,7 @@ Este proyecto es una aplicación web que muestra información sobre los personaj
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/rick-and-morty-app.git
+   https://github.com/Gwchicango/client.git
 
 2. Navega al directorio del proyecto:
     cd rick-and-morty-app/client
