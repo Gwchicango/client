@@ -4,7 +4,8 @@ import EpisodeList from '../components/EpisodeList';
 import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer'; // Importa el componente Footer
-import backgroundImage from '../assets/background-Episode.jpg'; 
+import { FaChevronUp } from 'react-icons/fa'; // Importa el icono de volver arriba
+import backgroundImage from '../assets/background-Episode.jpg';
 
 /**
  * Página para mostrar los episodios de Rick and Morty.
@@ -16,6 +17,7 @@ const EpisodesPage = () => {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('all');
+  const [showScroll, setShowScroll] = useState(false);
 
   // Efecto para obtener todos los episodios al cargar la página
   useEffect(() => {
@@ -51,6 +53,26 @@ const EpisodesPage = () => {
   useEffect(() => {
     handleSearchAndFilter();
   }, [searchTerm, filter, handleSearchAndFilter]);
+
+  // Función para manejar el scroll y mostrar el botón de volver arriba
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScroll && window.pageYOffset > 400) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 400) {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', checkScrollTop);
+    return () => {
+      window.removeEventListener('scroll', checkScrollTop);
+    };
+  }, [showScroll]);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="flex flex-col min-h-screen relative">
@@ -89,6 +111,14 @@ const EpisodesPage = () => {
         </div>
       </div>
       <Footer />
+<     div
+        className="z-40 fixed bottom-4 right-1 flex border-cyan-50 border-2 items-center text-white bg-slate-800 p-2 rounded-full cursor-pointer shadow-lg hover:bg-blue-900 transition duration-300 ease-in-out"
+        onClick={scrollTop}
+        style={{ display: showScroll ? 'flex' : 'none' }}
+      >
+        <FaChevronUp style={{ fontSize: '1rem' }} />
+        <span className="ml-1 text-sm">Back to top</span>
+      </div>
     </div>
   );
 };
